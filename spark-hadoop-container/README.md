@@ -24,12 +24,12 @@ docker run -it --rm --name sparkc -h sparkc -v `pwd`/data:/data asami76/spark-ha
 <pid> DataNode
 ```
 
-- To validate that spark is running run `# pyspark` to launch PySpark Shell  
-- After the shell is launched, from Docker host open the browser and browse to `http://sparkc:4040` to launch the `Spark UI` page.  
+- To validate that spark is running run `# ./spark/bin/pyspark` to launch PySpark Shell (Spark is installed in `/usr/local/spark` folder)  
+- After the shell is launched, from Docker host open the browser and browse to `http://sparkc:4040` to launch the `Spark UI` page (before that you have to expose the 4040 port or run the hosterr service below).  
 - the order of the listing above doesn't matter as long as all 5 hadoop services are running
 
 ## notes
-- the hadoop and sparl ports are not exposed by default.
+- the hadoop and spark ports are not exposed by default.
 - you can either edit the `Dockerfile` to `EXPOSE` the required ports, or the container's ip address to use the hadoop services from outside the container
 - another option is to use another container that would automatically register the container's hostname as an alias in the docker host's `/etc/hosts` file 
  in order to be able to access the container by name from the docker host
