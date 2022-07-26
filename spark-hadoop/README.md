@@ -37,5 +37,5 @@ docker run -it --rm --name sparkc -h sparkc -v `pwd`/data:/data asami76/spark-ha
 ## use hoster service
 1. pull the docker-hoster image from my repo on docker hub  
 `docker run -d -v /var/run/docker.sock:/tmp/docker.sock -v /etc/hosts:/tmp/hosts asami76/docker-hoster`
-3. build and run the pseudo-dist container from the build steps above
-4. from the docker host open your browser and type the following in the url `http://sparkc:9870`
+2. build and run the spark-hadoop container from the build steps above
+3. from the docker host open your browser and type the following in the url `http://sparkc:9870`
