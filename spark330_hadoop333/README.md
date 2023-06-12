@@ -3,7 +3,7 @@
 
 ## build
 1. clone the repo 
-2. browse to `spark-hadoop` directory
+2. browse to `spark330_hadoop333` directory
 3. build the docker image (e.g. `# docker build -t spark-hadoop .`)
 4. start a container (e.g. `# docker container run -it --name "sparkc" -h sparkc spark-hadoop`)
 
@@ -42,6 +42,6 @@ docker run -it --rm --name sparkc -h sparkc -v `pwd`/data:/data asami76/spark-ha
 
 ## use jupyter notebook to connect to spark
 to be able to use Jupyter Notebook to connect to the Spark standalone cluster in the container rather than using the pyspark shell run the following:  
-`jupyter-lab --no-browser --allow-root --ip 0.0.0.0 /data/notebooks/`  
+`jupyter-lab --no-browser --allow-root --ip 0.0.0.0 /data/`  
 Then copy the provided link to open Jupyter Notebook from the Docker host's browser
 
