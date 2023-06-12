@@ -42,6 +42,6 @@ docker run -it --rm --name sparkc -h sparkc -v `pwd`/data:/data asami76/spark-ha
 
 ## use jupyter notebook to connect to spark
 to be able to use Jupyter Notebook to connect to the Spark standalone cluster in the container rather than using the pyspark shell run the following:  
-`jupyter-notebook --no-browser --allow-root --ip 0.0.0.0 /data/notebooks/`  
+`jupyter-lab --no-browser --allow-root --ip 0.0.0.0 /data/notebooks/`  
 Then copy the provided link to open Jupyter Notebook from the Docker host's browser
 
