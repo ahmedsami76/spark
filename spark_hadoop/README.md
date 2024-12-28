@@ -1,9 +1,9 @@
-# use to create a docker container with Spark 3.3.0 and Hadoop 3.3.3 pseudo-distributed mode.
+# use to create a docker container with Spark 3.5.4 and Hadoop 3.3.6 pseudo-distributed mode.
 # this version uses openjdk:11 official base image on Debian
 
 ## build
 1. clone the repo 
-2. browse to `spark330_hadoop333` directory
+2. browse to `spark_hadoop` directory
 3. build the docker image (e.g. `# docker build -t spark-hadoop .`)
 4. start a container (e.g. `# docker container run -it --name "sparkc" -h sparkc spark-hadoop`)
 
