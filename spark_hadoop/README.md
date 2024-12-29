@@ -5,7 +5,7 @@
 1. clone the repo 
 2. browse to `spark_hadoop` directory
 3. build the docker image (e.g. `$ docker build -t spark-hadoop .`)
-4. start a container (e.g. `$ docker container run -it -v $(pwd)/data:/data --name "sparkc" -h sparkc spark-hadoop`)
+4. start a container (e.g. `$ docker container run -it -v $(pwd)/data:/data -v $(pwd)/code:/code --name "sparkc" -h sparkc spark-hadoop`)
 
 ## asami76/spark-hadoop image
 Alternatively you can download this image from my Docker Hub account without needing to build it by the running:  
