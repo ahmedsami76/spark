@@ -8,13 +8,13 @@ apt-get update --allow-unauthenticated --allow-insecure-repositories
 #
 cd /usr/local
 #
-update-alternatives --install "/usr/bin/java" "java" "/usr/local/openjdk-11/bin/java" 1
-update-alternatives --install "/usr/bin/javac" "javac" "/usr/local/openjdk-11/bin/javac" 1
-update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/local/openjdk-11/bin/javaws" 1
+update-alternatives --install "/usr/bin/java" "java" "/usr/local/openjdk-8/bin/java" 1
+update-alternatives --install "/usr/bin/javac" "javac" "/usr/local/openjdk-8/bin/javac" 1
+update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/local/openjdk-8/bin/javaws" 1
 #
-update-alternatives --set java /usr/local/openjdk-11/bin/java
-update-alternatives --set javac /usr/local/openjdk-11/bin/javac
-update-alternatives --set javaws /usr/local/openjdk-11/bin/javaws
+update-alternatives --set java /usr/local/openjdk-8/bin/java
+update-alternatives --set javac /usr/local/openjdk-8/bin/javac
+update-alternatives --set javaws /usr/local/openjdk-8/bin/javaws
 #
 ufw disable
 #
@@ -42,7 +42,7 @@ echo 'net.ipv6.conf.lo.disable_ipv6=1' >> /etc/sysctl.conf
 cd /usr/local/hadoop/etc/hadoop
 #
 echo 'export HADOOP_OPTS=-Djava.net.preferIPv4Stack=true' >> hadoop-env.sh
-echo 'export JAVA_HOME=/usr/local/openjdk-11' >> hadoop-env.sh
+echo 'export JAVA_HOME=/usr/local/openjdk-8' >> hadoop-env.sh
 echo 'export HADOOP_HOME_WARN_SUPPRESS="TRUE"' >> hadoop-env.sh
 echo 'export HADOOP_ROOT_LOGGER="WARN,DRFA"' >> hadoop-env.sh
 #

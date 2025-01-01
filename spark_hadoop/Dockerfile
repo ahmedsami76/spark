@@ -1,11 +1,11 @@
-FROM library/openjdk:11
+FROM library/openjdk:8
 
 WORKDIR /usr/local
 
 COPY hdpbootstrap.sh .
 COPY ./src  ./src
 
-ENV JAVA_HOME="/usr/local/openjdk-11"
+ENV JAVA_HOME="/usr/local/openjdk-8"
 ENV SPARK_MASTER_HOST=0.0.0.0
 #ENV JAVA_HOME="/usr/local/java"
 ENV PATH="/usr/local/java/bin:${PATH}"
